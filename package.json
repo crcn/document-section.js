@@ -1,0 +1,17 @@
+{
+  "name": "loaf",
+  "version": "0.0.0",
+  "description": "Sheaf bundles DOM elements together, similar to a document fragment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/classdojo/loaf.js.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "650283af6fa632832ac48ac485b4ec0421d79227"
+}
