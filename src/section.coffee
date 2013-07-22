@@ -48,13 +48,13 @@ class Section
   ###
   ###
 
-  append: () ->
+  append: (childNodes...) ->
 
     return unless arguments.length
 
-    pc = @start
+    pc = @end
 
-    for child in arguments
+    for child in childNodes
       @_insertAfter child, pc
       pc = child
 
@@ -63,14 +63,13 @@ class Section
   ###
   ###
 
-  prepend: () ->
+  prepend: (childNodes...) ->
     return unless arguments.length
 
     pc = @start
-    p  = @start.parentNode
 
-    for child in arguments
-      p.insertBefore child, pc
+    for child in childNodes
+      @_insertAfter child, pc
       pc = child
 
   ###
