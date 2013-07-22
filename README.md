@@ -8,9 +8,9 @@ Input:
   </head>
   <body>
     
-    <!-- give sheaf something to look for -->
-    <div id="sheaf-placeholder" style="display:none;"></div>
-    <div id="sheaf-placeholder2" style="display:none;"></div>
+    <!-- give loaf something to look for -->
+    <div id="loaf-placeholder" style="display:none;"></div>
+    <div id="loaf-placeholder2" style="display:none;"></div>
   </body>
 </html>
 ```
@@ -18,16 +18,16 @@ Input:
 Bundle:
 
 ```javascript
-var sheaf = require("sheaf"),
-sheaf1 = sheaf(),
-sheaf2 = sheaf();
+var loaf = require("loaf"),
+loaf1 = loaf(),
+loaf2 = loaf();
 
-sheaf1.replace($("<div>Hello World!</div>"));
-sheaf1.attach($("#sheaf-placeholder"));
+loaf1.replace($("<div>Hello World!</div>"));
+loaf1.attach($("#loaf-placeholder"));
 
 
-sheaf.replace($("#sheaf-placeholder"));
-sheaf2.append($("<div>What a nice day!</div>"));
+loaf.replace($("#loaf-placeholder"));
+loaf2.append($("<div>What a nice day!</div>"));
 ```
 
 Output:
@@ -38,7 +38,7 @@ Output:
   </head>
   <body>
     
-    <!-- give sheaf something to look for -->
+    <!-- give loaf something to look for -->
     <div>Hello World!</div>
     <div>What a nice day!</div>
   </body>

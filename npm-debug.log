@@ -1,0 +1,127 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.2.18
+3 info using node@v0.10.5
+4 verbose publish [ '.' ]
+5 verbose read json /Users/craig/Developer/Public/loaf.js/package.json
+6 verbose cache add [ '.', null ]
+7 verbose cache add name=undefined spec="." args=[".",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '.',
+8 verbose parsed url   path: '.',
+8 verbose parsed url   href: '.' }
+9 silly lockFile 3a52ce78- .
+10 verbose lock . /Users/craig/.npm/3a52ce78-.lock
+11 verbose read json package.json
+12 verbose tar pack [ '/var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/tmp.tgz',
+12 verbose tar pack   '.' ]
+13 verbose tarball /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/tmp.tgz
+14 verbose folder .
+15 info prepublish loaf@0.0.0
+16 silly lockFile 3a52ce78- .
+17 verbose lock . /Users/craig/.npm/3a52ce78-.lock
+18 silly lockFile 262ea39c-98926-0-7311984768602997-tmp-tgz /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/tmp.tgz
+19 verbose lock /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/tmp.tgz /Users/craig/.npm/262ea39c-98926-0-7311984768602997-tmp-tgz.lock
+20 silly lockFile 3a52ce78- .
+21 silly lockFile 3a52ce78- .
+22 silly lockFile 262ea39c-98926-0-7311984768602997-tmp-tgz /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/tmp.tgz
+23 silly lockFile 262ea39c-98926-0-7311984768602997-tmp-tgz /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/tmp.tgz
+24 verbose tar unpack /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/tmp.tgz
+25 silly lockFile c557b041-98926-0-7311984768602997-package /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/package
+26 verbose lock /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/package /Users/craig/.npm/c557b041-98926-0-7311984768602997-package.lock
+27 silly lockFile 262ea39c-98926-0-7311984768602997-tmp-tgz /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/tmp.tgz
+28 verbose lock /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/tmp.tgz /Users/craig/.npm/262ea39c-98926-0-7311984768602997-tmp-tgz.lock
+29 silly gunzTarPerm modes [ '755', '644' ]
+30 silly gunzTarPerm extractEntry package.json
+31 silly gunzTarPerm extractEntry README.md
+32 verbose read json /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/package/package.json
+33 silly lockFile c557b041-98926-0-7311984768602997-package /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/package
+34 silly lockFile c557b041-98926-0-7311984768602997-package /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/package
+35 silly lockFile 262ea39c-98926-0-7311984768602997-tmp-tgz /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/tmp.tgz
+36 silly lockFile 262ea39c-98926-0-7311984768602997-tmp-tgz /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/tmp.tgz
+37 verbose from cache /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/package/package.json
+38 verbose tar pack [ '/Users/craig/.npm/loaf/0.0.0/package.tgz',
+38 verbose tar pack   '/var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/package' ]
+39 verbose tarball /Users/craig/.npm/loaf/0.0.0/package.tgz
+40 verbose folder /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/package
+41 silly lockFile c557b041-98926-0-7311984768602997-package /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/package
+42 verbose lock /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/package /Users/craig/.npm/c557b041-98926-0-7311984768602997-package.lock
+43 silly lockFile df13a48f-craig-npm-loaf-0-0-0-package-tgz /Users/craig/.npm/loaf/0.0.0/package.tgz
+44 verbose lock /Users/craig/.npm/loaf/0.0.0/package.tgz /Users/craig/.npm/df13a48f-craig-npm-loaf-0-0-0-package-tgz.lock
+45 silly lockFile c557b041-98926-0-7311984768602997-package /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/package
+46 silly lockFile c557b041-98926-0-7311984768602997-package /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-1244/1374364698926-0.7311984768602997/package
+47 silly lockFile df13a48f-craig-npm-loaf-0-0-0-package-tgz /Users/craig/.npm/loaf/0.0.0/package.tgz
+48 silly lockFile df13a48f-craig-npm-loaf-0-0-0-package-tgz /Users/craig/.npm/loaf/0.0.0/package.tgz
+49 silly lockFile 9856be49-ers-craig-npm-loaf-0-0-0-package /Users/craig/.npm/loaf/0.0.0/package
+50 verbose lock /Users/craig/.npm/loaf/0.0.0/package /Users/craig/.npm/9856be49-ers-craig-npm-loaf-0-0-0-package.lock
+51 silly lockFile 9856be49-ers-craig-npm-loaf-0-0-0-package /Users/craig/.npm/loaf/0.0.0/package
+52 silly lockFile 9856be49-ers-craig-npm-loaf-0-0-0-package /Users/craig/.npm/loaf/0.0.0/package
+53 verbose tar unpack /Users/craig/.npm/loaf/0.0.0/package.tgz
+54 silly lockFile 9856be49-ers-craig-npm-loaf-0-0-0-package /Users/craig/.npm/loaf/0.0.0/package
+55 verbose lock /Users/craig/.npm/loaf/0.0.0/package /Users/craig/.npm/9856be49-ers-craig-npm-loaf-0-0-0-package.lock
+56 silly lockFile df13a48f-craig-npm-loaf-0-0-0-package-tgz /Users/craig/.npm/loaf/0.0.0/package.tgz
+57 verbose lock /Users/craig/.npm/loaf/0.0.0/package.tgz /Users/craig/.npm/df13a48f-craig-npm-loaf-0-0-0-package-tgz.lock
+58 silly gunzTarPerm modes [ '755', '644' ]
+59 silly gunzTarPerm extractEntry package.json
+60 silly gunzTarPerm extractEntry README.md
+61 verbose read json /Users/craig/.npm/loaf/0.0.0/package/package.json
+62 silly lockFile 9856be49-ers-craig-npm-loaf-0-0-0-package /Users/craig/.npm/loaf/0.0.0/package
+63 silly lockFile 9856be49-ers-craig-npm-loaf-0-0-0-package /Users/craig/.npm/loaf/0.0.0/package
+64 silly lockFile df13a48f-craig-npm-loaf-0-0-0-package-tgz /Users/craig/.npm/loaf/0.0.0/package.tgz
+65 silly lockFile df13a48f-craig-npm-loaf-0-0-0-package-tgz /Users/craig/.npm/loaf/0.0.0/package.tgz
+66 silly shasum updated bytes 689
+67 info shasum acc7009ddd7053b9f1083bb3d219daabcbd84d08
+67 info shasum /Users/craig/.npm/loaf/0.0.0/package.tgz
+68 verbose from cache /Users/craig/.npm/loaf/0.0.0/package/package.json
+69 verbose chmod /Users/craig/.npm/loaf/0.0.0/package.tgz 644
+70 verbose chown /Users/craig/.npm/loaf/0.0.0/package.tgz [ 501, 20 ]
+71 silly lockFile 3a52ce78- .
+72 silly publish { name: 'loaf',
+72 silly publish   version: '0.0.0',
+72 silly publish   description: 'Sheaf bundles DOM elements together, similar to a document fragment.',
+72 silly publish   main: 'index.js',
+72 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+72 silly publish   repository: { type: 'git', url: 'git://github.com/classdojo/loaf.js.git' },
+72 silly publish   author: '',
+72 silly publish   license: 'BSD',
+72 silly publish   readmeFilename: 'README.md',
+72 silly publish   gitHead: '650283af6fa632832ac48ac485b4ec0421d79227',
+72 silly publish   readme: 'Sheaf bundles DOM elements together, similar to a document fragment.\n\nInput:\n```html\n<html>\n  <head>\n    \n  </head>\n  <body>\n    \n    <!-- give sheaf something to look for -->\n    <div id="sheaf-placeholder" style="display:none;"></div>\n    <div id="sheaf-placeholder2" style="display:none;"></div>\n  </body>\n</html>\n```\n\nBundle:\n\n```javascript\nvar sheaf = require("sheaf"),\nsheaf1 = sheaf(),\nsheaf2 = sheaf();\n\nsheaf1.replace($("<div>Hello World!</div>"));\nsheaf1.attach($("#sheaf-placeholder"));\n\n\nsheaf.replace($("#sheaf-placeholder"));\nsheaf2.append($("<div>What a nice day!</div>"));\n```\n\nOutput:\n```html\n<html>\n  <head>\n    \n  </head>\n  <body>\n    \n    <!-- give sheaf something to look for -->\n    <div>Hello World!</div>\n    <div>What a nice day!</div>\n  </body>\n</html>\n```\n',
+72 silly publish   _id: 'loaf@0.0.0',
+72 silly publish   dist: { shasum: 'acc7009ddd7053b9f1083bb3d219daabcbd84d08' },
+72 silly publish   _from: '.' }
+73 verbose url raw loaf
+74 verbose url resolving [ 'http://registry.npmjs.org/', './loaf' ]
+75 verbose url resolved http://registry.npmjs.org/loaf
+76 info trying registry request attempt 1 at 16:58:29
+77 http PUT http://registry.npmjs.org/loaf
+78 http 409 http://registry.npmjs.org/loaf
+79 verbose url raw loaf
+80 verbose url resolving [ 'http://registry.npmjs.org/', './loaf' ]
+81 verbose url resolved http://registry.npmjs.org/loaf
+82 info trying registry request attempt 1 at 16:58:29
+83 http GET http://registry.npmjs.org/loaf
+84 http 200 http://registry.npmjs.org/loaf
+85 error publish fail Cannot publish over existing version.
+85 error publish fail Update the 'version' field in package.json and try again.
+85 error publish fail
+85 error publish fail If the previous version was published in error, see:
+85 error publish fail     npm help unpublish
+85 error publish fail
+85 error publish fail To automatically increment version numbers, see:
+85 error publish fail     npm help version
+86 error System Darwin 12.4.0
+87 error command "node" "/usr/local/bin/npm" "publish"
+88 error cwd /Users/craig/Developer/Public/loaf.js
+89 error node -v v0.10.5
+90 error npm -v 1.2.18
+91 error code EPUBLISHCONFLICT
+92 verbose exit [ 1, true ]
