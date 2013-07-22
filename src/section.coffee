@@ -7,10 +7,10 @@ class Section
 
     # need to have a temporary placeholder so we can
     # create a linked list
-    parent = document.createElement "div"
+    parent = nodeFactory.createElement "div"
 
     # comments are invisible
-    parent.appendChild @start = @end = document.creatComment "section"
+    parent.appendChild @start = @end = nodeFactory.creatComment "section"
 
   ###
   ###
