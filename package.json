@@ -13,5 +13,10 @@
   "author": "",
   "license": "BSD",
   "readmeFilename": "README.md",
-  "gitHead": "650283af6fa632832ac48ac485b4ec0421d79227"
+  "gitHead": "650283af6fa632832ac48ac485b4ec0421d79227",
+  "devDependencies": {
+    "expect.js": "~0.2.0",
+    "nofactor": "0.0.0",
+    "mocha": "~1.12.0"
+  }
 }

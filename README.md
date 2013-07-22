@@ -22,11 +22,11 @@ var loaf = require("loaf"),
 loaf1 = loaf(),
 loaf2 = loaf();
 
-loaf1.replace($("<div>Hello World!</div>"));
-loaf1.attach($("#loaf-placeholder"));
+loaf1.replace($("#loaf-placeholder"));
+loaf1.append($("<div>Hello World!</div>"));
 
 
-loaf.replace($("#loaf-placeholder"));
+loaf.replace($("#loaf-placeholder2"));
 loaf2.append($("<div>What a nice day!</div>"));
 ```
 
@@ -44,3 +44,60 @@ Output:
   </body>
 </html>
 ```
+
+
+## API
+
+### section loaf(nodeFactory = document)
+
+creates a new block of dom elements
+
+### section.replace(node)
+
+replaces the target node with the section. Note that the node must have a parent node
+
+### section.insertFirst(node)
+
+inserts as child at the beginning of the target node.
+
+### section.insertLast(node)
+
+inserts as child at the end of the target node.
+
+### section.hide()
+
+hides the section - replaces all bundled nodes with a placeholder node
+
+### section.show()
+
+displays the section if it's hidden
+
+### section.append(children...)
+
+appends a node to the section
+
+### section.prepend(children...)
+
+prepends a node to the section
+
+### section.replaceChildNodes(children...)
+
+replaces ALL children with the given nodes
+
+### section.removeChildNodes()
+
+removes all child nodes
+
+### section.getChildNodes()
+
+returns an array of the child nodes
+
+### section.start
+
+the start marker for the section
+
+### section.end
+
+the stop marker for the section
+
+
