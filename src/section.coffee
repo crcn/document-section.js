@@ -28,7 +28,6 @@ class Section
   replace: (node) ->
     node.parentNode.insertBefore @toFragment(), node
     node.parentNode.removeChild node
-    # TODO
 
   ###
   ###
