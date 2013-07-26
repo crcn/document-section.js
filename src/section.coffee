@@ -123,17 +123,19 @@ class Section
 
   _insertAfter: (newNodes, refNode) ->
 
+    newNodes = newNodes.map (node) ->
+      if node.__isLoafSection then node.toFragment() else node
+
+    if newNodes.length > 1
+      newNodes = @nodeFactory.createFragment newNodes...
+    else
+      newNodes = newNodes[0]
+
     @_addParent()
 
     p = refNode.parentNode
+    p.insertBefore newNodes, refNode.nextSibling
 
-    for child in newNodes
-      if child.__isLoafSection
-        child._parent = @
-        child = child.toFragment()
-
-      p.insertBefore child, refNode.nextSibling
-      refNode = child
 
   ###
   ###
