@@ -82,9 +82,9 @@ prepends a node to the section
 
 ### section.replaceChildNodes(children...)
 
-replaces ALL children with the given nodes
+disposes the loaf
 
-### section.removeChildNodes()
+### section.dispose()
 
 removes all child nodes
 

@@ -3,14 +3,24 @@ class Section
   ###
   ###
 
-  constructor: (nodeFactory = document) ->
+  __isLoafSection: true
+
+  ###
+  ###
+
+  constructor: (@nodeFactory = document) ->
 
     # need to have a temporary placeholder so we can
     # create a linked list
-    parent = nodeFactory.createElement "div"
 
-    # comments are invisible
-    parent.appendChild @start = @end = nodeFactory.creatComment "section"
+    # create a few invisible markers
+    @start = nodeFactory.createTextNode ""
+
+    # note - END is necessary because there might be a few embedded loafs, where the
+    # new END node to this loaf might belong to another end node.
+    @end   = nodeFactory.createTextNode ""
+
+    @_addParent()
 
   ###
   ###
@@ -35,7 +45,19 @@ class Section
 
   show: () ->
     return unless @_detached
-    @append @_detached...
+    @_addParent()
+
+    allElements = []
+
+    for node in @_detached
+      if node.parentNode and (childLoad = node.parentNode._loaf)
+        node.parentNode._loaf = undefined
+        allElements.push childLoad.toFragment()
+      else
+        allElements.push node 
+
+
+    @append allElements...
     @_detached = undefined
 
   ###
@@ -43,34 +65,23 @@ class Section
 
   hide: () ->
     @_detached = @getChildNodes()
-    @removeChildNodes()
+    @_detached.shift()
+    @_detached.pop()
+    for child in @_detached
+      @start.parentNode.removeChild child
+
 
   ###
   ###
 
-  append: (childNodes...) ->
-
-    return unless arguments.length
-
-    pc = @end
-
-    for child in childNodes
-      @_insertAfter child, pc
-      pc = child
-
-    @end = arguments[arguments.length - 1]
+  append: (children...) ->
+    @_insertAfter children, @end.previousSibling
 
   ###
   ###
 
-  prepend: (childNodes...) ->
-    return unless arguments.length
-
-    pc = @start
-
-    for child in childNodes
-      @_insertAfter child, pc
-      pc = child
+  prepend: (children...) ->
+    @_insertAfter children, @start
 
   ###
   ###
@@ -79,46 +90,71 @@ class Section
     @removeChildNodes()
     @append arguments
 
+  ###
+  ###
 
+  toString: () -> 
+    buffer = @getChildNodes().map (node) ->
+      node.innerHTML or String(node)
+    buffer.join("")
 
   ###
   ###
 
-  removeChildNodes: () ->
-    cn = @start
-    p  = @start.parentNode
+  toFragment: () ->
+    @nodeFactory.createFragment @getChildNodes()...
 
-    while cn isnt @end
-      cn = cn.nextSibling
-      p.removeChild cn
-      cn = @start
+  ###
+  ###
 
-    @end = @start
+  dispose: () ->
+    for child in @getChildNodes()
+      child.parentNode.removeChild child
 
   ###
   ###
 
   getChildNodes: () ->
+
+    @_addParent()
+
     cn = @start
+    end = @end.nextSibling
 
     children = []
 
-    while cn isnt @end
-      cn = cn.nextSibling
+    while cn isnt end
       children.push cn
+      cn = cn.nextSibling
 
     children
 
   ###
   ###
 
-  _insertAfter: (newNode, refNode) ->
+  _insertAfter: (newNodes, refNode) ->
+
+    @_addParent()
+
     p = refNode.parentNode
 
-    if refNode.nextSibling
-      p.insertBefore refNode.nextSibling, newNode
-    else
-      p.appendChild newNode
+    for child in newNodes
+      if child.__isLoafSection
+        child._parent = @
+        child = child.toFragment()
+
+      p.insertBefore child, refNode.nextSibling
+      refNode = child
+
+  ###
+  ###
+
+  _addParent: () ->
+    unless @start.parentNode
+      parent = @nodeFactory.createElement "div"
+      parent._loaf = @
+      parent.appendChild @start
+      parent.appendChild @end
 
 
 
