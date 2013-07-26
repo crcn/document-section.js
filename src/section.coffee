@@ -133,8 +133,7 @@ class Section
 
     @_addParent()
 
-    p = refNode.parentNode
-    p.insertBefore newNodes, refNode.nextSibling
+    refNode.parentNode.insertBefore newNodes, refNode.nextSibling
 
 
   ###
