@@ -26,18 +26,8 @@ class Section
   ###
 
   replace: (node) ->
-    # TODO
-
-  ###
-  ###
-
-  insertFirst: (node) ->
-    # TODO
-
-  ###
-  ###
-
-  insertLast: (node) ->
+    node.parentNode.insertBefore @toFragment(), node
+    node.parentNode.removeChild node
     # TODO
 
   ###

@@ -55,7 +55,35 @@ describe("loaf", function() {
     it("& be disposed", function() {
       ps.dispose();
       expect(String(divs)).to.be("<div></div>");
-    })
+    });
   });
+
+
+  it("can replace a node", function() {
+    var block = nofactor.string.createElement("div"),
+    child = nofactor.string.createElement("span");
+    block.appendChild(child);
+    expect(block.toString()).to.be("<div><span></span></div>");
+    var dl = loaf(nofactor.string);
+    dl.replace(child);
+    expect(block.toString()).to.be("<div></div>");
+
+    dl.append(child);
+    dl.append(nofactor.string.createTextNode("BLAH"));
+
+    expect(block.toString()).to.be("<div><span></span>BLAH</div>");
+
+
+    var dl2 = loaf(nofactor.string);
+    dl2.append(nofactor.string.createTextNode("AH"), nofactor.string.createTextNode("AH"));
+    dl.append(dl2);
+
+    expect(block.toString()).to.be("<div><span></span>BLAHAHAH</div>");
+    dl.hide();
+    expect(block.toString()).to.be("<div></div>");
+    
+
+
+  })
 
 });
