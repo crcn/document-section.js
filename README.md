@@ -54,14 +54,6 @@ creates a new block of dom elements
 
 ### section.replace(node)
 
-replaces the target node with the section. Note that the node must have a parent node
-
-### section.insertFirst(node)
-
-inserts as child at the beginning of the target node.
-
-### section.insertLast(node)
-
 inserts as child at the end of the target node.
 
 ### section.hide()
@@ -83,6 +75,10 @@ prepends a node to the section
 ### section.replaceChildNodes(children...)
 
 disposes the loaf
+
+### section.toFragment()
+
+returns the section as a document fragment
 
 ### section.dispose()
 
