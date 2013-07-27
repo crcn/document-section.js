@@ -1,3 +1,5 @@
+nofactor = require "nofactor"
+
 class Section
 
   ###
@@ -8,17 +10,17 @@ class Section
   ###
   ###
 
-  constructor: (@nodeFactory = document) ->
+  constructor: (@nodeFactory = nofactor.default) ->
 
     # need to have a temporary placeholder so we can
     # create a linked list
 
     # create a few invisible markers
-    @start = nodeFactory.createTextNode ""
+    @start = @nodeFactory.createTextNode ""
 
     # note - END is necessary because there might be a few embedded loafs, where the
     # new END node to this loaf might belong to another end node.
-    @end   = nodeFactory.createTextNode ""
+    @end   = @nodeFactory.createTextNode ""
 
     @_addParent()
 
