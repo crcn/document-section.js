@@ -55,11 +55,19 @@ class Section
   ###
 
   hide: () ->
-    @_detached = @getChildNodes()
-    @_detached.shift()
-    @_detached.pop()
-    for child in @_detached
+    @_detached = @removeAll()
+
+  ###
+  ###
+
+  removeAll: () ->
+    children = @getChildNodes()
+    children.shift()
+    children.pop()
+    for child in children
       @start.parentNode.removeChild child
+    children
+
 
 
   ###
@@ -78,8 +86,8 @@ class Section
   ###
 
   replaceChildNodes: () ->
-    @removeChildNodes()
-    @append arguments
+    @removeAll()
+    @append arguments...
 
   ###
   ###
