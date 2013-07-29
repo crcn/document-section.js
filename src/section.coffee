@@ -101,7 +101,7 @@ class Section
   ###
 
   toFragment: () ->
-    @nodeFactory.createFragment @getChildNodes()...
+    @nodeFactory.createFragment @getChildNodes()
 
   ###
   ###
@@ -137,7 +137,7 @@ class Section
       if node.__isLoafSection then node.toFragment() else node
 
     if newNodes.length > 1
-      newNodes = @nodeFactory.createFragment newNodes...
+      newNodes = @nodeFactory.createFragment newNodes
     else
       newNodes = newNodes[0]
 
