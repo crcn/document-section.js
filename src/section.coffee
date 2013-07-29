@@ -35,7 +35,7 @@ class Section
   ###
 
   show: () ->
-    return unless @_detached
+    return @ unless @_detached
     @_addParent()
 
     allElements = []
@@ -50,12 +50,14 @@ class Section
 
     @append allElements...
     @_detached = undefined
+    @
 
   ###
   ###
 
   hide: () ->
     @_detached = @removeAll()
+    @
 
   ###
   ###
