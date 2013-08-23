@@ -4,6 +4,33 @@ expect = require("expect.js");
 
 describe("loaf", function() {
 
+
+  it("can replace a node", function() {
+    var block = nofactor.string.createElement("div"),
+    child = nofactor.string.createElement("span");
+    block.appendChild(child);
+    expect(block.toString()).to.be("<div><span></span></div>");
+    var dl = loaf(nofactor.string);
+    dl.replace(child);
+    expect(block.toString()).to.be("<div></div>");
+
+    dl.append(child);
+    dl.append(nofactor.string.createTextNode("BLAH"));
+
+    expect(block.toString()).to.be("<div><span></span>BLAH</div>");
+
+
+    var dl2 = loaf(nofactor.string);
+    dl2.append(nofactor.string.createTextNode("AH"), nofactor.string.createTextNode("AH"));
+    dl.append(dl2);
+
+    expect(block.toString()).to.be("<div><span></span>BLAHAHAH</div>");
+    dl.hide();
+    expect(block.toString()).to.be("<div></div>");
+  });
+
+
+
   it("can create a loaf", function() {
     var divLoaf = loaf(nofactor.string);
     expect(divLoaf.toString()).to.be("");
@@ -23,7 +50,8 @@ describe("loaf", function() {
     expect(divs.toString()).to.be("hello<div></div>");
   })
 
-  describe("can create a section within a section", function() {
+  it("can create a section within a section", function() {
+
 
     var divs = loaf(nofactor.string),
     ps       = loaf(nofactor.string);
@@ -59,31 +87,39 @@ describe("loaf", function() {
   });
 
 
-  it("can replace a node", function() {
-    var block = nofactor.string.createElement("div"),
-    child = nofactor.string.createElement("span");
-    block.appendChild(child);
-    expect(block.toString()).to.be("<div><span></span></div>");
-    var dl = loaf(nofactor.string);
-    dl.replace(child);
-    expect(block.toString()).to.be("<div></div>");
-
-    dl.append(child);
-    dl.append(nofactor.string.createTextNode("BLAH"));
-
-    expect(block.toString()).to.be("<div><span></span>BLAH</div>");
+  it("can insert no items", function() {
+    var l = loaf();
+    l.append();
+  });
 
 
-    var dl2 = loaf(nofactor.string);
-    dl2.append(nofactor.string.createTextNode("AH"), nofactor.string.createTextNode("AH"));
-    dl.append(dl2);
+  it("can append an item if it's been detached", function() {
+    var l1 = loaf(),
+    l2 = loaf();
+    l1.append(l2);
+    l1.hide();
+    l2.append(nofactor.string.createTextNode("HA"));
+  });
 
-    expect(block.toString()).to.be("<div><span></span>BLAHAHAH</div>");
-    dl.hide();
-    expect(block.toString()).to.be("<div></div>");
-    
+
+  it("doesn't leave a replaced loaf without a parent", function() {
+    var l1 = loaf(),
+    l2 = loaf(),
+    l3 = loaf();
+    l1.append(l2);
+    l1.replaceChildNodes(l3);
+    expect(l2.start.parentNode).not.to.be(undefined);
+  });
 
 
+
+  it("doesn't leave a replaced loaf without a parent 2", function() {
+    var l1 = loaf(),
+    l2 = loaf();
+    l1.append(l2);
+    l2.hide();
+    l1.removeAll();
+    expect(l2.start.parentNode).not.to.be(undefined);
   })
 
 });
