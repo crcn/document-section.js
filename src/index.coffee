@@ -88,7 +88,7 @@ class Section
   ###
 
   replaceChildNodes: () ->
-    @_loaf @removeAll()
+    @removeAll()
     @append arguments...
 
   ###
