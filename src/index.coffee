@@ -109,8 +109,11 @@ class Section
   ###
 
   dispose: () ->
-    for child in @getChildNodes()
-      child.parentNode.removeChild child
+    return if @_disposed
+    @_disposed = true
+    @_removeAll()
+    @start.parentNode.removeChild @start
+    @end.parentNode.removeChild @end
 
   ###
   ###
