@@ -96,7 +96,7 @@ class Section
 
   toString: () -> 
     buffer = @getChildNodes().map (node) ->
-      node.innerHTML or String(node)
+      node.innerHTML or (node.nodeValue ? String(node))
     buffer.join("")
 
   ###
