@@ -1,4 +1,7 @@
-Sheaf bundles DOM elements together, similar to a document fragment.
+Loaf creates virtual "sections" of DOM elements - a sort of document fragment that can be referenced anytime it's attached to the DOM. Loaf is used in:
+
+- [mojo.js](https://github.com/classdojo/mojo.js) - javascript framework
+- [paperclip.js](https://github.com/classdojo/paperclip.js) - template engine.
 
 Input:
 ```html
