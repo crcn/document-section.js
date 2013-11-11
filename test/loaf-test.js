@@ -4,7 +4,7 @@ expect = require("expect.js");
 
 describe("loaf", function() {
 
-
+  
   it("can replace a node", function() {
     var block = nofactor.string.createElement("div"),
     child = nofactor.string.createElement("span");
