@@ -20,6 +20,6 @@
   },
   "dependencies": {
     "nofactor": "0.0.x",
-    "protoclass": "0.0.1"
+    "protoclass": "0.0.x"
   }
 }
