@@ -1,3 +1,5 @@
+## Loaf.js [![Alt ci](https://travis-ci.org/classdojo/loaf.js.png)](https://travis-ci.org/classdojo/loaf.js)
+
 Loaf creates virtual "sections" of DOM elements - a sort of document fragment that can be referenced anytime it's attached to the DOM. Loaf is used in:
 
 - [mojo.js](https://github.com/classdojo/mojo.js) - javascript framework
