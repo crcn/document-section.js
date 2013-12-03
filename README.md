@@ -26,24 +26,24 @@ Bundle:
 ```javascript
 var helloSection = loaf(), buttonSection = loaf(), buttonElement;
 
-// add multiple items
+// add multiple items - this demonstrates how multiple nodes are controlled by one
+// section
 helloSection.append(document.createTextNode("Hello "));
 helloSection.append(document.createTextNode("World!"));
 
-// setup the 
+// setup the button which toggles the message visibility
 buttonSection.append(buttonElement = $("<div><a href='#'>Toggle Message Visibility</a></div>")[0]);
-
 
 // create a toggle for the "Hello World!" message.
 $(buttonElement).click(function () {
-    if(helloSection._detached) {
+    if(helloSection.visible) {
         helloSection.show();
     } else {
         helloSection.hide();
     }
 });
 
-// add the document fragments.
+// convert the sections into controlled document fragments.
 $("#application").append(helloSection.toFragment());
 $("#application").append(buttonSection.toFragment());
 ```
