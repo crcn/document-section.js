@@ -24,18 +24,18 @@ Input:
 Bundle:
 
 ```javascript
-var helloSection = loaf(), buttonSection = loaf(), comp;
+var helloSection = loaf(), buttonSection = loaf(), buttonElement;
 
 // add multiple items
 helloSection.append(document.createTextNode("Hello "));
 helloSection.append(document.createTextNode("World!"));
 
 // setup the 
-buttonSection.append(comp = $("<div><a href='#'>Toggle Message Visibility</a></div>")[0]);
+buttonSection.append(buttonElement = $("<div><a href='#'>Toggle Message Visibility</a></div>")[0]);
 
 
 // create a toggle for the "Hello World!" message.
-$(comp).click(function () {
+$(buttonElement).click(function () {
     if(helloSection._detached) {
         helloSection.show();
     } else {
