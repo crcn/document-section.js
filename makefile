@@ -1,0 +1,9 @@
+all:
+	mkdir -p build;
+	./node_modules/.bin/browserify lib/index.js > build/loaf.js
+
+min:
+	closure-compiler --js build/loaf.js --js_output_file build/loaf.min.js
+
+clean:
+	rm -rf build;
