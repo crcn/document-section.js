@@ -11,6 +11,7 @@ var Section = function (nodeFactory) {
   // create invisible markers so we know where the sections are
   this.start       = nodeFactory.createTextNode("");
   this.end         = nodeFactory.createTextNode("");
+  this.visible     = true;
 
   var parent  = nodeFactory.createElement("div");
   parent.appendChild(this.start);

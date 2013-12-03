@@ -3,7 +3,7 @@ all:
 	./node_modules/.bin/browserify lib/browser.js > build/loaf.js
 
 min:
-	closure-compiler --js build/loaf.js --js_output_file build/loaf.min.js
+	closure-compiler --js build/loaf.js --js_output_file build/loaf3.min.js
 
 clean:
 	rm -rf build;
