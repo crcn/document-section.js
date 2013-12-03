@@ -42,7 +42,7 @@ Section = protoclass(Section, {
     if(!this._detached) return this;
     this.append.apply(this, this._detached.getInnerChildNodes());
     this._detached = void 0;
-    this.visibile = true;
+    this.visible = true;
     return this;
   },
 
