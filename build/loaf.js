@@ -1,4 +1,6 @@
 ;(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+module.exports = window.loaf = require("./index");
+},{"./index":2}],2:[function(require,module,exports){
 var protoclass = require("protoclass"),
 nofactor       = require("nofactor");
 
@@ -190,7 +192,7 @@ Section = protoclass(Section, {
 module.exports = function (nodeFactory)  {
   return new Section(nodeFactory);
 }
-},{"nofactor":5,"protoclass":7}],2:[function(require,module,exports){
+},{"nofactor":6,"protoclass":8}],3:[function(require,module,exports){
 var protoclass = require("protoclass");
 
 function BaseFactory () {
@@ -229,7 +231,7 @@ protoclass(BaseFactory, {
 
 module.exports = BaseFactory;
 
-},{"protoclass":7}],3:[function(require,module,exports){
+},{"protoclass":8}],4:[function(require,module,exports){
 var Base = require("./base");
 
 function DomFactory () {
@@ -282,7 +284,7 @@ Base.extend(DomFactory, {
 });
 
 module.exports = new DomFactory();
-},{"./base":2}],4:[function(require,module,exports){
+},{"./base":3}],5:[function(require,module,exports){
 // from node-ent
 
 var entities = {
@@ -312,14 +314,14 @@ module.exports = function (str) {
 
   }).join("");
 }
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 module.exports = {
   string : require("./string"),
   dom    : require("./dom")
 };
 
 module.exports["default"] = typeof window !== "undefined" ? module.exports.dom : module.exports.string;
-},{"./dom":3,"./string":6}],6:[function(require,module,exports){
+},{"./dom":4,"./string":7}],7:[function(require,module,exports){
 var ent     = require("./ent"),
 Base        = require("./base"),
 protoclass  = require("protoclass");
@@ -754,7 +756,7 @@ protoclass(Base, StringNodeFactory, {
 });
 
 module.exports = new StringNodeFactory();
-},{"./base":2,"./ent":4,"protoclass":7}],7:[function(require,module,exports){
+},{"./base":3,"./ent":5,"protoclass":8}],8:[function(require,module,exports){
 function _copy (to, from) {
 
   for (var i = 0, n = from.length; i < n; i++) {
