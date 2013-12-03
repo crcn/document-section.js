@@ -5,6 +5,8 @@ Loaf creates virtual "sections" of DOM elements - a sort of document fragment th
 - [mojo.js](https://github.com/classdojo/mojo.js) - javascript framework
 - [paperclip.js](https://github.com/classdojo/paperclip.js) - template engine.
 
+
+
 Input:
 ```html
 <html>
@@ -14,8 +16,7 @@ Input:
   <body>
     
     <!-- give loaf something to look for -->
-    <div id="loaf-placeholder" style="display:none;"></div>
-    <div id="loaf-placeholder2" style="display:none;"></div>
+    <div id="application"></div>
   </body>
 </html>
 ```
@@ -23,16 +24,28 @@ Input:
 Bundle:
 
 ```javascript
-var loaf = require("loaf"),
-loaf1 = loaf(),
-loaf2 = loaf();
+var section = loaf(), component = loaf(), comp;
 
-loaf1.replace($("#loaf-placeholder"));
-loaf1.append($("<div>Hello World!</div>"));
+// add multiple items
+section.append(document.createTextNode("Hello "));
+section.append(document.createTextNode("World!"));
+
+// setup the 
+component.append(comp = $("<div><a href='#'>Toggle Message Visibility</a></div>")[0]);
 
 
-loaf.replace($("#loaf-placeholder2"));
-loaf2.append($("<div>What a nice day!</div>"));
+// create a toggle for the "Hello World!" message.
+$(comp).click(function () {
+    if(section._detached) {
+        section.show();
+    } else {
+        section.hide();
+    }
+});
+
+// add the document fragments.
+$("#application").append(section.toFragment());
+$("#application").append(component.toFragment());
 ```
 
 Output:
@@ -42,14 +55,18 @@ Output:
     
   </head>
   <body>
-    
-    <!-- give loaf something to look for -->
-    <div>Hello World!</div>
-    <div>What a nice day!</div>
+    <div id="application">
+      Hello World!
+      <div>
+        <a href="#">Toggle Message Visibility</a>
+      </div>
+    </div>
   </body>
 </html>
 ```
 
+
+Here's a live example: http://jsfiddle.net/4L8wy/.
 
 ## API
 
