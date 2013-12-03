@@ -24,28 +24,28 @@ Input:
 Bundle:
 
 ```javascript
-var section = loaf(), component = loaf(), comp;
+var helloSection = loaf(), buttonSection = loaf(), comp;
 
 // add multiple items
-section.append(document.createTextNode("Hello "));
-section.append(document.createTextNode("World!"));
+helloSection.append(document.createTextNode("Hello "));
+helloSection.append(document.createTextNode("World!"));
 
 // setup the 
-component.append(comp = $("<div><a href='#'>Toggle Message Visibility</a></div>")[0]);
+buttonSection.append(comp = $("<div><a href='#'>Toggle Message Visibility</a></div>")[0]);
 
 
 // create a toggle for the "Hello World!" message.
 $(comp).click(function () {
-    if(section._detached) {
-        section.show();
+    if(helloSection._detached) {
+        helloSection.show();
     } else {
-        section.hide();
+        helloSection.hide();
     }
 });
 
 // add the document fragments.
-$("#application").append(section.toFragment());
-$("#application").append(component.toFragment());
+$("#application").append(helloSection.toFragment());
+$("#application").append(buttonSection.toFragment());
 ```
 
 Output:
@@ -66,7 +66,7 @@ Output:
 ```
 
 
-Here's a live example: http://jsfiddle.net/4L8wy/.
+Here's a live example: http://jsfiddle.net/4L8wy/. Be sure to inspect the DOM as you're toggling the message visibility!
 
 ## API
 
