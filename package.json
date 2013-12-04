@@ -1,6 +1,6 @@
 {
   "name": "loaf",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Sheaf bundles DOM elements together, similar to a document fragment.",
   "main": "./lib/index.js",
   "scripts": {
