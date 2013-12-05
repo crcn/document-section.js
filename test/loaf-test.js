@@ -112,13 +112,21 @@ describe("loaf", function() {
   });
 
 
-
   it("doesn't leave a replaced loaf without a parent 2", function() {
     var l1 = loaf(),
     l2 = loaf();
     l1.append(l2);
     l2.hide();
     l1.removeAll();
+    expect(l2.start.parentNode).not.to.be(undefined);
+  });
+
+  it("doesn't bust sub sections if a parent is disposed", function () {
+    var l1 = loaf(),
+    l2 = loaf();
+    l1.append(l2);
+    l1.dispose();
+    expect(l1.start.parentNode).to.be(undefined);
     expect(l2.start.parentNode).not.to.be(undefined);
   })
 
