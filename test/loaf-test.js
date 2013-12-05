@@ -50,7 +50,7 @@ describe("loaf", function() {
     expect(divs.toString()).to.be("hello<div></div>");
   })
 
-  it("can create a section within a section", function() {
+  describe("can create a section within a section", function() {
 
 
     var divs = loaf(nofactor.string),
@@ -77,7 +77,7 @@ describe("loaf", function() {
       expect(String(divs)).to.be("");
       divs.show();
       expect(String(divs)).to.be("<p></p><p></p><div></div>");
-      
+
     });
 
     it("& be disposed", function() {

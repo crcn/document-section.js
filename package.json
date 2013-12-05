@@ -17,7 +17,9 @@
   "devDependencies": {
     "expect.js": "~0.2.0",
     "mocha": "~1.12.0",
-    "browserify": "~2.36.1"
+    "browserify": "~2.36.1",
+    "istanbul": "~0.1.46",
+    "coveralls": "~2.5.0"
   },
   "dependencies": {
     "nofactor": "0.0.x",
