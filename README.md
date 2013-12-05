@@ -37,9 +37,9 @@ buttonSection.append(buttonElement = $("<div><a href='#'>Toggle Message Visibili
 // create a toggle for the "Hello World!" message.
 $(buttonElement).click(function () {
     if(helloSection.visible) {
-        helloSection.show();
-    } else {
         helloSection.hide();
+    } else {
+        helloSection.show();
     }
 });
 
@@ -66,7 +66,7 @@ Output:
 ```
 
 
-Here's a live example: http://jsfiddle.net/4L8wy/. Be sure to inspect the DOM as you're toggling the message visibility!
+Here's a live example: http://jsfiddle.net/4L8wy/1/. Be sure to inspect the DOM as you're toggling the message visibility!
 
 ## API
 
