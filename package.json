@@ -1,6 +1,7 @@
 {
   "name": "loaf",
   "version": "0.1.3",
+
   "description": "Sheaf bundles DOM elements together, similar to a document fragment.",
   "main": "./lib/index.js",
   "scripts": {
@@ -16,10 +17,13 @@
   "gitHead": "650283af6fa632832ac48ac485b4ec0421d79227",
   "devDependencies": {
     "expect.js": "~0.2.0",
-    "mocha": "~1.12.0"
+    "mocha": "~1.12.0",
+    "browserify": "~2.36.1",
+    "istanbul": "~0.1.46",
+    "coveralls": "~2.5.0"
   },
   "dependencies": {
     "nofactor": "0.0.x",
-    "protoclass": "0.0.1"
+    "protoclass": "0.0.x"
   }
 }

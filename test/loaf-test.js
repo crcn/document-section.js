@@ -50,7 +50,7 @@ describe("loaf", function() {
     expect(divs.toString()).to.be("hello<div></div>");
   })
 
-  it("can create a section within a section", function() {
+  describe("can create a section within a section", function() {
 
 
     var divs = loaf(nofactor.string),
@@ -77,7 +77,7 @@ describe("loaf", function() {
       expect(String(divs)).to.be("");
       divs.show();
       expect(String(divs)).to.be("<p></p><p></p><div></div>");
-      
+
     });
 
     it("& be disposed", function() {
@@ -112,13 +112,21 @@ describe("loaf", function() {
   });
 
 
-
   it("doesn't leave a replaced loaf without a parent 2", function() {
     var l1 = loaf(),
     l2 = loaf();
     l1.append(l2.toFragment());
     l2.hide();
     l1.removeAll();
+    expect(l2.start.parentNode).not.to.be(undefined);
+  });
+
+  it("doesn't bust sub sections if a parent is disposed", function () {
+    var l1 = loaf(),
+    l2 = loaf();
+    l1.append(l2);
+    l1.dispose();
+    expect(l1.start.parentNode).to.be(undefined);
     expect(l2.start.parentNode).not.to.be(undefined);
   })
 
