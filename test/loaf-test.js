@@ -124,7 +124,7 @@ describe("loaf", function() {
   it("doesn't bust sub sections if a parent is disposed", function () {
     var l1 = loaf(),
     l2 = loaf();
-    l1.append(l2);
+    l1.append(l2.toFragment());
     l1.dispose();
     expect(l1.start.parentNode).to.be(undefined);
     expect(l2.start.parentNode).not.to.be(undefined);
