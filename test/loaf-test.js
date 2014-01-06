@@ -4,31 +4,6 @@ expect = require("expect.js");
 
 describe("loaf", function() {
 
-  
-  it("can replace a node", function() {
-    var block = nofactor.string.createElement("div"),
-    child = nofactor.string.createElement("span");
-    block.appendChild(child);
-    expect(block.toString()).to.be("<div><span></span></div>");
-    var dl = loaf(nofactor.string);
-    dl.replace(child);
-    expect(block.toString()).to.be("<div></div>");
-
-    dl.append(child);
-    dl.append(nofactor.string.createTextNode("BLAH"));
-
-    expect(block.toString()).to.be("<div><span></span>BLAH</div>");
-
-
-    var dl2 = loaf(nofactor.string);
-    dl2.append(nofactor.string.createTextNode("AH"), nofactor.string.createTextNode("AH"));
-    dl.append(dl2.toFragment());
-
-    expect(block.toString()).to.be("<div><span></span>BLAHAHAH</div>");
-    dl.hide();
-    expect(block.toString()).to.be("<div></div>");
-  });
-
 
 
   it("can create a loaf", function() {
@@ -56,7 +31,7 @@ describe("loaf", function() {
     var divs = loaf(nofactor.string),
     ps       = loaf(nofactor.string);
 
-    divs.append(ps.toFragment());
+    divs.append(ps.render());
 
     ps.append(nofactor.string.createElement("p"));
     expect(String(divs)).to.be("<p></p>");
@@ -96,7 +71,7 @@ describe("loaf", function() {
   it("can append an item if it's been detached", function() {
     var l1 = loaf(),
     l2 = loaf();
-    l1.append(l2.toFragment());
+    l1.append(l2.render());
     l1.hide();
     l2.append(nofactor.string.createTextNode("HA"));
   });
@@ -106,8 +81,8 @@ describe("loaf", function() {
     var l1 = loaf(),
     l2 = loaf(),
     l3 = loaf();
-    l1.append(l2.toFragment());
-    l1.replaceChildNodes(l3.toFragment());
+    l1.append(l2.render());
+    l1.replaceChildNodes(l3.render());
     expect(l2.start.parentNode).not.to.be(undefined);
   });
 
@@ -115,7 +90,7 @@ describe("loaf", function() {
   it("doesn't leave a replaced loaf without a parent 2", function() {
     var l1 = loaf(),
     l2 = loaf();
-    l1.append(l2.toFragment());
+    l1.append(l2.render());
     l2.hide();
     l1.removeAll();
     expect(l2.start.parentNode).not.to.be(undefined);
@@ -124,7 +99,7 @@ describe("loaf", function() {
   it("doesn't bust sub sections if a parent is disposed", function () {
     var l1 = loaf(),
     l2 = loaf();
-    l1.append(l2.toFragment());
+    l1.append(l2.render());
     l1.dispose();
     expect(l1.start.parentNode).to.be(undefined);
     expect(l2.start.parentNode).not.to.be(undefined);
