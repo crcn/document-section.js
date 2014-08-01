@@ -1,0 +1,146 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/craig/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/tmp.tgz
+12 verbose folder .
+13 info prepublish loaf@0.2.3
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/craig/.npm/1f1177db-tar.lock
+16 silly lockFile d01717eb-54819-0-5071760746650398-tmp-tgz tar:///var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/tmp.tgz
+17 verbose lock tar:///var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/tmp.tgz /Users/craig/.npm/d01717eb-54819-0-5071760746650398-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile d01717eb-54819-0-5071760746650398-tmp-tgz tar:///var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/tmp.tgz
+21 silly lockFile d01717eb-54819-0-5071760746650398-tmp-tgz tar:///var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/tmp.tgz
+22 verbose tar unpack /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/tmp.tgz
+23 silly lockFile ed988423-54819-0-5071760746650398-package tar:///var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/package
+24 verbose lock tar:///var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/package /Users/craig/.npm/ed988423-54819-0-5071760746650398-package.lock
+25 silly lockFile d01717eb-54819-0-5071760746650398-tmp-tgz tar:///var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/tmp.tgz
+26 verbose lock tar:///var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/tmp.tgz /Users/craig/.npm/d01717eb-54819-0-5071760746650398-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry .npmignore
+30 silly gunzTarPerm modified mode [ '.npmignore', 511, 493 ]
+31 silly gunzTarPerm extractEntry README.md
+32 silly gunzTarPerm extractEntry .travis.yml
+33 silly gunzTarPerm extractEntry build/loaf.js
+34 silly gunzTarPerm extractEntry build/loaf4.min.js
+35 silly gunzTarPerm extractEntry lib/browser.js
+36 silly gunzTarPerm extractEntry lib/index.js
+37 silly gunzTarPerm extractEntry makefile
+38 silly gunzTarPerm extractEntry test/loaf-test.js
+39 silly lockFile ed988423-54819-0-5071760746650398-package tar:///var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/package
+40 silly lockFile ed988423-54819-0-5071760746650398-package tar:///var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/package
+41 silly lockFile d01717eb-54819-0-5071760746650398-tmp-tgz tar:///var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/tmp.tgz
+42 silly lockFile d01717eb-54819-0-5071760746650398-tmp-tgz tar:///var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/tmp.tgz
+43 verbose tar pack [ '/Users/craig/.npm/loaf/0.2.3/package.tgz',
+43 verbose tar pack   '/var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/package' ]
+44 verbose tarball /Users/craig/.npm/loaf/0.2.3/package.tgz
+45 verbose folder /var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/package
+46 silly lockFile ed988423-54819-0-5071760746650398-package tar:///var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/package
+47 verbose lock tar:///var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/package /Users/craig/.npm/ed988423-54819-0-5071760746650398-package.lock
+48 silly lockFile 54427475-craig-npm-loaf-0-2-3-package-tgz tar:///Users/craig/.npm/loaf/0.2.3/package.tgz
+49 verbose lock tar:///Users/craig/.npm/loaf/0.2.3/package.tgz /Users/craig/.npm/54427475-craig-npm-loaf-0-2-3-package-tgz.lock
+50 silly lockFile ed988423-54819-0-5071760746650398-package tar:///var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/package
+51 silly lockFile ed988423-54819-0-5071760746650398-package tar:///var/folders/n1/r96x64mx6jzcbzkbz1ddrw6r0000gn/T/npm-5434-0vVmyzgN/1406928654819-0.5071760746650398/package
+52 silly lockFile 54427475-craig-npm-loaf-0-2-3-package-tgz tar:///Users/craig/.npm/loaf/0.2.3/package.tgz
+53 silly lockFile 54427475-craig-npm-loaf-0-2-3-package-tgz tar:///Users/craig/.npm/loaf/0.2.3/package.tgz
+54 silly lockFile 762a4cef-ers-craig-npm-loaf-0-2-3-package /Users/craig/.npm/loaf/0.2.3/package
+55 verbose lock /Users/craig/.npm/loaf/0.2.3/package /Users/craig/.npm/762a4cef-ers-craig-npm-loaf-0-2-3-package.lock
+56 silly lockFile 762a4cef-ers-craig-npm-loaf-0-2-3-package /Users/craig/.npm/loaf/0.2.3/package
+57 silly lockFile 762a4cef-ers-craig-npm-loaf-0-2-3-package /Users/craig/.npm/loaf/0.2.3/package
+58 verbose tar unpack /Users/craig/.npm/loaf/0.2.3/package.tgz
+59 silly lockFile e22a5b4e-ers-craig-npm-loaf-0-2-3-package tar:///Users/craig/.npm/loaf/0.2.3/package
+60 verbose lock tar:///Users/craig/.npm/loaf/0.2.3/package /Users/craig/.npm/e22a5b4e-ers-craig-npm-loaf-0-2-3-package.lock
+61 silly lockFile 54427475-craig-npm-loaf-0-2-3-package-tgz tar:///Users/craig/.npm/loaf/0.2.3/package.tgz
+62 verbose lock tar:///Users/craig/.npm/loaf/0.2.3/package.tgz /Users/craig/.npm/54427475-craig-npm-loaf-0-2-3-package-tgz.lock
+63 silly gunzTarPerm modes [ '755', '644' ]
+64 silly gunzTarPerm extractEntry package.json
+65 silly gunzTarPerm extractEntry .npmignore
+66 silly gunzTarPerm extractEntry README.md
+67 silly gunzTarPerm extractEntry .travis.yml
+68 silly gunzTarPerm extractEntry build/loaf.js
+69 silly gunzTarPerm extractEntry build/loaf4.min.js
+70 silly gunzTarPerm extractEntry lib/browser.js
+71 silly gunzTarPerm extractEntry lib/index.js
+72 silly gunzTarPerm extractEntry makefile
+73 silly gunzTarPerm extractEntry test/loaf-test.js
+74 silly lockFile e22a5b4e-ers-craig-npm-loaf-0-2-3-package tar:///Users/craig/.npm/loaf/0.2.3/package
+75 silly lockFile e22a5b4e-ers-craig-npm-loaf-0-2-3-package tar:///Users/craig/.npm/loaf/0.2.3/package
+76 silly lockFile 54427475-craig-npm-loaf-0-2-3-package-tgz tar:///Users/craig/.npm/loaf/0.2.3/package.tgz
+77 silly lockFile 54427475-craig-npm-loaf-0-2-3-package-tgz tar:///Users/craig/.npm/loaf/0.2.3/package.tgz
+78 verbose chmod /Users/craig/.npm/loaf/0.2.3/package.tgz 644
+79 verbose chown /Users/craig/.npm/loaf/0.2.3/package.tgz [ 501, 20 ]
+80 silly lockFile 3a52ce78- .
+81 silly lockFile 3a52ce78- .
+82 silly publish { name: 'loaf',
+82 silly publish   version: '0.2.3',
+82 silly publish   description: 'Sheaf bundles DOM elements together, similar to a document fragment.',
+82 silly publish   main: './lib/index.js',
+82 silly publish   scripts: { test: 'mocha --timeout 100' },
+82 silly publish   repository: { type: 'git', url: 'git://github.com/classdojo/loaf.js.git' },
+82 silly publish   author: '',
+82 silly publish   license: 'BSD',
+82 silly publish   readmeFilename: 'README.md',
+82 silly publish   gitHead: '650283af6fa632832ac48ac485b4ec0421d79227',
+82 silly publish   devDependencies:
+82 silly publish    { 'expect.js': '~0.2.0',
+82 silly publish      mocha: '~1.12.0',
+82 silly publish      browserify: '~2.36.1',
+82 silly publish      istanbul: '~0.1.46',
+82 silly publish      coveralls: '~2.5.0' },
+82 silly publish   dependencies: { nofactor: '0.0.x', protoclass: '0.0.x' },
+82 silly publish   readme: '## Loaf.js [![Alt ci](https://travis-ci.org/classdojo/loaf.js.png)](https://travis-ci.org/classdojo/loaf.js)\n\nLoaf creates virtual "sections" of DOM elements - a sort of document fragment that can be referenced anytime it\'s attached to the DOM. Loaf is used in:\n\n- [mojo.js](https://github.com/classdojo/mojo.js) - javascript framework\n- [paperclip.js](https://github.com/classdojo/paperclip.js) - template engine.\n\n\n\nInput:\n```html\n<html>\n  <head>\n    \n  </head>\n  <body>\n    \n    <!-- give loaf something to look for -->\n    <div id="application"></div>\n  </body>\n</html>\n```\n\nBundle:\n\n```javascript\nvar helloSection = loaf(), buttonSection = loaf(), buttonElement;\n\n// add multiple items - this demonstrates how multiple nodes are controlled by one\n// section\nhelloSection.append(document.createTextNode("Hello "));\nhelloSection.append(document.createTextNode("World!"));\n\n// setup the button which toggles the message visibility\nbuttonSection.append(buttonElement = $("<div><a href=\'#\'>Toggle Message Visibility</a></div>")[0]);\n\n// create a toggle for the "Hello World!" message.\n$(buttonElement).click(function () {\n    if(helloSection.visible) {\n        helloSection.hide();\n    } else {\n        helloSection.show();\n    }\n});\n\n// convert the sections into controlled document fragments.\n$("#application").append(helloSection.toFragment());\n$("#application").append(buttonSection.toFragment());\n```\n\nOutput:\n```html\n<html>\n  <head>\n    \n  </head>\n  <body>\n    <div id="application">\n      Hello World!\n      <div>\n        <a href="#">Toggle Message Visibility</a>\n      </div>\n    </div>\n  </body>\n</html>\n```\n\n\nHere\'s a live example: http://jsfiddle.net/4L8wy/1/. Be sure to inspect the DOM as you\'re toggling the message visibility!\n\n## API\n\n### section loaf(nodeFactory = document)\n\ncreates a new block of dom elements\n\n### section.replace(node)\n\ninserts as child at the end of the target node.\n\n### section.hide()\n\nhides the section - replaces all bundled nodes with a placeholder node\n\n### section.show()\n\ndisplays the section if it\'s hidden\n\n### section.append(children...)\n\nappends a node to the section\n\n### section.prepend(children...)\n\nprepends a node to the section\n\n### section.replaceChildNodes(children...)\n\ndisposes the loaf\n\n### section.toFragment()\n\nreturns the section as a document fragment\n\n### section.dispose()\n\nremoves all child nodes\n\n### section.getChildNodes()\n\nreturns an array of the child nodes\n\n### section.start\n\nthe start marker for the section\n\n### section.end\n\nthe stop marker for the section\n\n\n',
+82 silly publish   bugs: { url: 'https://github.com/classdojo/loaf.js/issues' },
+82 silly publish   homepage: 'https://github.com/classdojo/loaf.js',
+82 silly publish   _id: 'loaf@0.2.3',
+82 silly publish   dist: { shasum: 'f189e8a9c4658dfff17befc5045d0b29027fad16' },
+82 silly publish   _from: '.' }
+83 verbose url raw loaf
+84 verbose url resolving [ 'http://registry.npmjs.org/', './loaf' ]
+85 verbose url resolved http://registry.npmjs.org/loaf
+86 info trying registry request attempt 1 at 14:30:54
+87 http PUT http://registry.npmjs.org/loaf
+88 http 403 http://registry.npmjs.org/loaf
+89 error publish Failed PUT 403
+90 error Error: forbidden cannot modify pre-existing version: 0.2.3
+90 error old={"name":"loaf","version":"0.2.3","description":"Sheaf bundles DOM elements together, similar to a document fragment.","main":"./lib/index.js","scripts":{"test":"mocha --timeout 100"},"repository":{"type":"git","url":"git://github.com/classdojo/loaf.js.git"},"author":"","license":"BSD","gitHead":"650283af6fa632832ac48ac485b4ec0421d79227","devDependencies":{"expect.js":"~0.2.0","mocha":"~1.12.0","browserify":"~2.36.1","istanbul":"~0.1.46","coveralls":"~2.5.0"},"dependencies":{"nofactor":"0.0.x","protoclass":"0.0.x"},"bugs":{"url":"https://github.com/classdojo/loaf.js/issues"},"homepage":"https://github.com/classdojo/loaf.js","_id":"loaf@0.2.3","dist":{"shasum":"9ccd0c0d6ed3adc6a6b2dbabfb4e21173bfed6bb","tarball":"http://registry.npmjs.org/loaf/-/loaf-0.2.3.tgz"},"_from":".","_npmVersion":"1.4.3","_npmUser":{"name":"architectd","email":"craig.j.condon@gmail.com"},"maintainers":[{"name":"architectd","email":"craig.j.condon@gmail.com"}]}
+90 error new={"name":"loaf","version":"0.2.3","description":"Sheaf bundles DOM elements together, similar to a document fragment.","main":"./lib/index.js","scripts":{"test":"mocha --timeout 100"},"repository":{"type":"git","url":"git://github.com/classdojo/loaf.js.git"},"author":"","license":"BSD","readmeFilename":"README.md","gitHead":"650283af6fa632832ac48ac485b4ec0421d79227","devDependencies":{"expect.js":"~0.2.0","mocha":"~1.12.0","browserify":"~2.36.1","istanbul":"~0.1.46","coveralls":"~2.5.0"},"dependencies":{"nofactor":"0.0.x","protoclass":"0.0.x"},"readme":"## Loaf.js [![Alt ci](https://travis-ci.org/classdojo/loaf.js.png)](https://travis-ci.org/classdojo/loaf.js)\u000a\u000aLoaf creates virtual \"sections\" of DOM elements - a sort of document fragment that can be referenced anytime it's attached to the DOM. Loaf is used in:\u000a\u000a- [mojo.js](https://github.com/classdojo/mojo.js) - javascript framework\u000a- [paperclip.js](https://github.com/classdojo/paperclip.js) - template engine.\u000a\u000a\u000a\u000aInput:\u000a```html\u000a<html>\u000a  <head>\u000a    \u000a  </head>\u000a  <body>\u000a    \u000a    <!-- give loaf something to look for -->\u000a    <div id=\"application\"></div>\u000a  </body>\u000a</html>\u000a```\u000a\u000aBundle:\u000a\u000a```javascript\u000avar helloSection = loaf(), buttonSection = loaf(), buttonElement;\u000a\u000a// add multiple items - this demonstrates how multiple nodes are controlled by one\u000a// section\u000ahelloSection.append(document.createTextNode(\"Hello \"));\u000ahelloSection.append(document.createTextNode(\"World!\"));\u000a\u000a// setup the button which toggles the message visibility\u000abuttonSection.append(buttonElement = $(\"<div><a href='#'>Toggle Message Visibility</a></div>\")[0]);\u000a\u000a// create a toggle for the \"Hello World!\" message.\u000a$(buttonElement).click(function () {\u000a    if(helloSection.visible) {\u000a        helloSection.hide();\u000a    } else {\u000a        helloSection.show();\u000a    }\u000a});\u000a\u000a// convert the sections into controlled document fragments.\u000a$(\"#application\").append(helloSection.toFragment());\u000a$(\"#application\").append(buttonSection.toFragment());\u000a```\u000a\u000aOutput:\u000a```html\u000a<html>\u000a  <head>\u000a    \u000a  </head>\u000a  <body>\u000a    <div id=\"application\">\u000a      Hello World!\u000a      <div>\u000a        <a href=\"#\">Toggle Message Visibility</a>\u000a      </div>\u000a    </div>\u000a  </body>\u000a</html>\u000a```\u000a\u000a\u000aHere's a live example: http://jsfiddle.net/4L8wy/1/. Be sure to inspect the DOM as you're toggling the message visibility!\u000a\u000a## API\u000a\u000a### section loaf(nodeFactory = document)\u000a\u000acreates a new block of dom elements\u000a\u000a### section.replace(node)\u000a\u000ainserts as child at the end of the target node.\u000a\u000a### section.hide()\u000a\u000ahides the section - replaces all bundled nodes with a placeholder node\u000a\u000a### section.show()\u000a\u000adisplays the section if it's hidden\u000a\u000a### section.append(children...)\u000a\u000aappends a node to the section\u000a\u000a### section.prepend(children...)\u000a\u000aprepends a node to the section\u000a\u000a### section.replaceChildNodes(children...)\u000a\u000adisposes the loaf\u000a\u000a### section.toFragment()\u000a\u000areturns the section as a document fragment\u000a\u000a### section.dispose()\u000a\u000aremoves all child nodes\u000a\u000a### section.getChildNodes()\u000a\u000areturns an array of the child nodes\u000a\u000a### section.start\u000a\u000athe start marker for the section\u000a\u000a### section.end\u000a\u000athe stop marker for the section\u000a\u000a\u000a","bugs":{"url":"https://github.com/classdojo/loaf.js/issues"},"homepage":"https://github.com/classdojo/loaf.js","_id":"loaf@0.2.3","dist":{"shasum":"f189e8a9c4658dfff17befc5045d0b29027fad16","tarball":"http://registry.npmjs.org/loaf/-/loaf-0.2.3.tgz"},"_from":".","_npmVersion":"1.4.3","_npmUser":{"name":"architectd","email":"craig.j.condon@gmail.com"},"maintainers":[{"name":"architectd","email":"craig.j.condon@gmail.com"}]}: loaf
+90 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:237:14)
+90 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:123:22)
+90 error     at Request.EventEmitter.emit (events.js:98:17)
+90 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:893:14)
+90 error     at Request.EventEmitter.emit (events.js:117:20)
+90 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:844:12)
+90 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+90 error     at _stream_readable.js:920:16
+90 error     at process._tickCallback (node.js:415:13)
+91 error If you need help, you may report this *entire* log,
+91 error including the npm and node versions, at:
+91 error     <http://github.com/npm/npm/issues>
+92 error System Darwin 13.3.0
+93 error command "node" "/usr/local/bin/npm" "publish"
+94 error cwd /Users/craig/Developer/Public/loaf.js
+95 error node -v v0.10.26
+96 error npm -v 1.4.3
+97 verbose exit [ 1, true ]
