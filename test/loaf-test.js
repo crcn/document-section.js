@@ -115,7 +115,7 @@ describe("loaf", function() {
     }
 
     expect(l.getChildNodes().length).to.be(12);
-
   });
+
 
 });
