@@ -103,6 +103,19 @@ describe("loaf", function() {
     l1.dispose();
     expect(l1.start.parentNode).to.be(undefined);
     expect(l2.start.parentNode).not.to.be(undefined);
-  })
+  });
+
+  it("can shuffle nodes around and still maintain the section children", function () {
+    var l = loaf();
+    for(var i = 10; i--;) l.append(nofactor.string.createElement("div"));
+
+    var children = l.getInnerChildNodes();
+    for (var i = children.length; i--;) {
+      l.append(children[i]);
+    }
+
+    expect(l.getChildNodes().length).to.be(12);
+
+  });
 
 });
