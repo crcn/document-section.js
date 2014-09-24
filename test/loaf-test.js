@@ -25,6 +25,21 @@ describe("loaf", function() {
     expect(divs.toString()).to.be("hello<div></div>");
   })
 
+
+  it("can appendChild a few elements", function() {
+    var divs = loaf(nofactor.string);
+    divs.appendChild(nofactor.string.createElement("div"));
+    divs.appendChild(nofactor.string.createTextNode("hello"));
+    expect(divs.toString()).to.be("<div></div>hello");
+  })
+
+  it("can prependChild a few elements", function() {
+    var divs = loaf(nofactor.string);
+    divs.prependChild(nofactor.string.createElement("div"));
+    divs.prependChild(nofactor.string.createTextNode("hello"));
+    expect(divs.toString()).to.be("hello<div></div>");
+  })
+
   describe("can create a section within a section", function() {
 
 
