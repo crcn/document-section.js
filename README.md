@@ -1,10 +1,12 @@
-## Loaf.js [![Build Status](https://travis-ci.org/mojo-js/loaf.js.svg?branch=master)](https://travis-ci.org/mojo-js/loaf.js)
+[![Build Status](https://travis-ci.org/mojo-js/document-section.js.svg?branch=master)](https://travis-ci.org/mojo-js/document-section.js)
 
 
-Loaf allows you to keep track, and modify document fragments that have been appended to the DOM. For example:
+document sections allows you to keep track, and modify document fragments that have been appended to the DOM. For example:
 
 ```javascript
-var helloSection = loaf(), buttonSection = loaf(), buttonElement;
+var createDocumentSection = require("document-section");
+
+var helloSection = createDocumentSection(), buttonSection = createDocumentSection(), buttonElement;
 
 // add multiple items - this demonstrates how multiple nodes are controlled by one
 // section
@@ -50,7 +52,7 @@ Here's a live example: http://jsfiddle.net/4L8wy/1/. Be sure to inspect the DOM 
 
 ## API
 
-### section loaf(nodeFactory = document)
+### section createDocumentSection(nodeFactory = document)
 
 creates a new block of dom elements
 
@@ -72,7 +74,7 @@ prepends a node to the section
 
 ### section.replaceChildNodes(children...)
 
-disposes the loaf
+disposes the document section
 
 ### section.toFragment()
 
