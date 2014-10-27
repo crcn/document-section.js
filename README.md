@@ -1,22 +1,7 @@
 ## Loaf.js [![Build Status](https://travis-ci.org/mojo-js/loaf.js.svg?branch=master)](https://travis-ci.org/mojo-js/loaf.js)
 
-Loaf allows you to create a section of elements, and keep track of that section even when it's appended to the DOM. 
 
-Input:
-```html
-<html>
-  <head>
-    
-  </head>
-  <body>
-    
-    <!-- give loaf something to look for -->
-    <div id="application"></div>
-  </body>
-</html>
-```
-
-Bundle:
+Loaf allows you to keep track, and modify document fragments that have been appended to the DOM. For example:
 
 ```javascript
 var helloSection = loaf(), buttonSection = loaf(), buttonElement;
@@ -39,8 +24,8 @@ $(buttonElement).click(function () {
 });
 
 // convert the sections into controlled document fragments.
-$("#application").append(helloSection.toFragment());
-$("#application").append(buttonSection.toFragment());
+document.body.appendChild(helloSection.toFragment());
+document.body.appendChild(buttonSection.toFragment());
 ```
 
 Output:
@@ -81,11 +66,11 @@ hides the section - replaces all bundled nodes with a placeholder node
 
 displays the section if it's hidden
 
-### section.append(children...)
+### section.appendChild(children...)
 
 appends a node to the section
 
-### section.prepend(children...)
+### section.appendChild(children...)
 
 prepends a node to the section
 
