@@ -1,11 +1,6 @@
 ## Loaf.js [![Build Status](https://travis-ci.org/mojo-js/loaf.js.svg?branch=master)](https://travis-ci.org/mojo-js/loaf.js)
 
-Loaf creates virtual "sections" of DOM elements - a sort of document fragment that can be referenced anytime it's attached to the DOM. Loaf is used in:
-
-- [mojo.js](https://github.com/classdojo/mojo.js) - javascript framework
-- [paperclip.js](https://github.com/classdojo/paperclip.js) - template engine.
-
-
+Loaf creates virtual "sections" of DOM elements - a sort of document fragment that can be referenced anytime it's attached to the DOM.
 
 Input:
 ```html
