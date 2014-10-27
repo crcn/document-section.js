@@ -54,10 +54,6 @@ Here's a live example: http://jsfiddle.net/4L8wy/1/. Be sure to inspect the DOM 
 
 creates a new block of dom elements
 
-### section.replace(node)
-
-inserts as child at the end of the target node.
-
 ### section.hide()
 
 hides the section - replaces all bundled nodes with a placeholder node
