@@ -1,6 +1,6 @@
 ## Loaf.js [![Build Status](https://travis-ci.org/mojo-js/loaf.js.svg?branch=master)](https://travis-ci.org/mojo-js/loaf.js)
 
-Loaf creates virtual "sections" of DOM elements - a sort of document fragment that can be referenced anytime it's attached to the DOM.
+Loaf allows you to create a section of elements, and keep track of that section even when it's appended to the DOM. 
 
 Input:
 ```html
