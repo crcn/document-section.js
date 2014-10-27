@@ -1,5 +1,5 @@
 {
-  "name": "loaf",
+  "name": "document-section",
   "version": "0.2.6",
 
   "description": "Sheaf bundles DOM elements together, similar to a document fragment.",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/classdojo/loaf.js.git"
+    "url": "git://github.com/mojo-js/document-section.js.git"
   },
   "author": "",
   "license": "BSD",
