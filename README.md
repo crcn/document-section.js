@@ -28,11 +28,11 @@ var helloSection = loaf(), buttonSection = loaf(), buttonElement;
 
 // add multiple items - this demonstrates how multiple nodes are controlled by one
 // section
-helloSection.append(document.createTextNode("Hello "));
-helloSection.append(document.createTextNode("World!"));
+helloSection.appendChild(document.createTextNode("Hello "));
+helloSection.appendChild(document.createTextNode("World!"));
 
 // setup the button which toggles the message visibility
-buttonSection.append(buttonElement = $("<div><a href='#'>Toggle Message Visibility</a></div>")[0]);
+buttonSection.appendChild(buttonElement = $("<div><a href='#'>Toggle Message Visibility</a></div>")[0]);
 
 // create a toggle for the "Hello World!" message.
 $(buttonElement).click(function () {
