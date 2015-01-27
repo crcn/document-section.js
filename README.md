@@ -26,8 +26,8 @@ $(buttonElement).click(function () {
 });
 
 // convert the sections into controlled document fragments.
-document.body.appendChild(helloSection.toFragment());
-document.body.appendChild(buttonSection.toFragment());
+document.body.appendChild(helloSection.render());
+document.body.appendChild(buttonSection.render());
 ```
 
 Output:
