@@ -1,6 +1,6 @@
 {
   "name": "document-section",
-  "version": "0.2.6",
+  "version": "0.2.3",
 
   "description": "Sheaf bundles DOM elements together, similar to a document fragment.",
   "main": "./lib/index.js",

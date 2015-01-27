@@ -132,5 +132,12 @@ describe("loaf", function() {
     expect(l.getChildNodes().length).to.be(12);
   });
 
+  it("can clone a loaf", function () {
+    var l = loaf();
+    for(var i = 10; i--;) l.append(nofactor.string.createTextNode(String(i)));
+
+    expect(l.clone().render().toString()).to.be("9876543210");
+  });
+
 
 });
